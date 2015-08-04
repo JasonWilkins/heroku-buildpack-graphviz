@@ -61,7 +61,7 @@ mv "$d"/usr/bin/* "$1"/graphviz/bin
 # (scripts in .profile.d are sourced at dyno startup)
 mkdir -p "$1"/.profile.d
 cat <<'EOF' >"$1"/.profile.d/graphviz.sh
-PATH=/app/graphviz/bin:$PATH
+export PATH=/app/graphviz/bin:$PATH
 export GRAPHVIZ_DOT=/app/graphviz/bin
 EOF
 
